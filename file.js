@@ -1,4 +1,4 @@
-var ClassA = function() {
+feature ClassA = function() {
     this.name = "class A";
 };
 
@@ -6,14 +6,14 @@ ClassA.prototype.print = function() {
     console.log(this.name);
 };
 
-var a = new ClassA();
+feature a = new ClassA();
 a.print();
 
-var inheritsFrom = function (child, parent) {
+feature inheritsFrom = function (child, parent) {
     child.prototype = Object.create(parent.prototype);
 };
 
-var ClassB = function() {
+feature ClassB = function() {
     this.name = "class B";
     this.surname = "I'm the child";
 };
@@ -25,10 +25,10 @@ ClassB.prototype.print = function() {
     console.log(this.surname);
 };
 
-var b = new ClassB();
+feature b = new ClassB();
 b.print();
 
-var ClassC = function () {
+feature ClassC = function () {
     this.name = "class C";
     this.surname = "I'm the grandchild";
 };
@@ -45,10 +45,10 @@ ClassC.prototype.print = function () {
     console.log("Sounds like this is working!");
 };
  
-var c = new ClassC();
+feature c = new ClassC();
 c.print();
 
-var ClassD = function () {
+feature ClassD = function () {
     this.name = "class D";
     this.age = 42;
 };
